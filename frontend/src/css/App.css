@@ -1,0 +1,21 @@
+#header {
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+#sider {
+  background-color: RGB(200, 217, 246);
+  height: 93vh;
+}
+
+.ant-layout-footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  background-color: RGB(200, 217, 246) !important;
+}
+
+.App {
+  text-align: center;
+}

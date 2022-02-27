@@ -1,0 +1,39 @@
+version: '3'
+services:
+
+  backend:
+    image: docker-backend
+    container_name: backend
+    build:
+      context: ./backend
+    networks:
+      - chat-app
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+
+  frontend:
+    image: docker-frontend
+    container_name: frontend
+    build:
+      context: ./frontend
+    networks:
+      - chat-app
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_HOST_URL=http://localhost:3000
+    depends_on:
+      - backend
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+
+networks:
+  chat-app:
+    driver: bridge

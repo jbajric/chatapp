@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: backend
+  datasource:
+    url: jdbc:postgresql://ec2-52-73-149-159.compute-1.amazonaws.com:5432/db6blnro637lup
+    username: stgirqrhjzvobe
+    password: eafc8e9b75935ca6b56600549dbd6f5b6d216cfc4d5d42495030e7ae470b1f61
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  sql:
+    init:
+      mode: always
