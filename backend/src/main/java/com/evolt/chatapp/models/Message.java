@@ -2,9 +2,6 @@ package com.evolt.chatapp.models;
 
 import lombok.*;
 
-import javax.persistence.*;
-import java.time.Instant;
-
 @Getter
 @Setter
 @Builder
@@ -13,7 +10,7 @@ import java.time.Instant;
 public class Message {
     private String from;
     private String to;
-    private Instant timestamp;
+    private String timestamp;
     private String content;
     private MessageType messageType;
 }

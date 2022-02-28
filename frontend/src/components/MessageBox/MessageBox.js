@@ -69,6 +69,25 @@ class MessageBox extends React.Component {
     );
   };
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.allSentMessages !== this.props.allSentMessages) {
+      let convertedMssgs = [];
+      for (let i = 0; i < this.props.allSentMessages.length; i++)
+        convertedMssgs.push(
+          createMessage(
+            this.props.allSentMessages[i]["sender"],
+            null,
+            this.props.allSentMessages[i]["sendingTimestamp"],
+            this.props.allSentMessages[i]["content"],
+            MessageType["GLOBAL"]
+          )
+        );
+      this.setState(() => ({
+        messages: convertedMssgs,
+      }));
+    }
+  }
+
   userLeft = () => {
     axios.get(USER_LEFT_URL, { params: { username: this.props.user } }).then();
   };

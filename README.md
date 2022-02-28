@@ -47,10 +47,5 @@ This project uses a deployed Heroku Postgres database with following connection 
 3. Centered chat room window.
 4. Ability to send and receive messages in chat room.
 5. Broadcast notification when a new user joins chat room. 
-6. Broadcast notification when an user leaves chat room.
-
-## Optional functionalities:
-
-1. Ability for private conversations with active users.
-2. Notifications for a created private conversation.
-3. View of old messages in global chat room.
+6. Broadcast notification when a user leaves chat room.
+7. Ability to view all sent messages in global chat room.

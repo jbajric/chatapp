@@ -3,6 +3,10 @@
   color: whitesmoke;
 }
 
+#loadOldMessagesButton {
+  margin: 5px;
+}
+
 #sider {
   background-color: RGB(200, 217, 246);
   height: 93vh;

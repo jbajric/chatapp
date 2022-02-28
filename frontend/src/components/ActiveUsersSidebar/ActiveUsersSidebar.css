@@ -5,7 +5,7 @@
 #activeUserItem {
   background-color: yellowgreen !important;
   color: darkblue;
-  padding: 20px;
-  font-size: 15px;
-  border-radius: 15%;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 12%;
 }

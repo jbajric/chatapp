@@ -21,7 +21,7 @@ public class User implements Serializable {
     @Column(name = "id")
     private UUID id;
 
-    @Column (name = "username")
+    @Column(name = "username")
     @NotNull(message = "Username must be defined!")
     private String username;
 }
