@@ -9,6 +9,8 @@ import ActiveUsersSidebar from "./components/ActiveUsersSidebar/ActiveUsersSideb
 import MessageBox from "./components/MessageBox/MessageBox";
 import axios from "axios";
 
+axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*"; // for all requests
+
 const { Header, Footer, Sider, Content } = Layout;
 
 const HOST_URL = "http://localhost:8080";

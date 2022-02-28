@@ -40,14 +40,6 @@ class MessageBox extends React.Component {
     };
   }
 
-  userLeftAction = () => {
-    axios
-      .get(HOST_URL + USER_LEFT_URL, {
-        params: { username: this.state.username },
-      })
-      .then();
-  };
-
   onMessageReceive = (msg) => {
     this.setState((prevState) => ({
       messages: [...prevState.messages, msg],

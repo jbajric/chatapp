@@ -25,7 +25,7 @@ maven install
 Launch the following terminal commands:
 
 ```
-docker compose build
+docker compose build --pull --no-cache
 docker compose up
 ```
 
@@ -49,3 +49,4 @@ This project uses a deployed Heroku Postgres database with following connection 
 5. Broadcast notification when a new user joins chat room. 
 6. Broadcast notification when a user leaves chat room.
 7. Ability to view all sent messages in global chat room.
+8. Dockerized backend and frontend.

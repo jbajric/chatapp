@@ -16,7 +16,7 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 import java.util.Collections;
 
 @Configuration
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*",  allowedHeaders = "*")
 @EnableWebSocketMessageBroker
 public class CommunicationConfig implements WebSocketMessageBrokerConfigurer {
 

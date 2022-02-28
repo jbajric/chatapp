@@ -12,6 +12,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin(origins = "*",  allowedHeaders = "*")
 public class MessageController {
 
     @Autowired
@@ -42,6 +44,7 @@ public class MessageController {
         return message;
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/userJoined")
     public String userJoinedSystemMessage() {
         String generatedUsername = RandomStringUtils.randomAlphanumeric(10);
@@ -57,6 +60,7 @@ public class MessageController {
     }
 
     @GetMapping("/userLeft")
+    @CrossOrigin(origins = "*")
     public void userLeftSystemMessage(@RequestParam String username) {
         Message message = Message.builder().from("SYSTEM_MSSG")
                 .to(username)
@@ -68,11 +72,13 @@ public class MessageController {
         userServices.removeUser(username);
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/activeUsers")
     public List<String> getAllUsers() {
         return userServices.fetchAllUsers();
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/allSentMessages")
     public List<MessageDTO> getAllSentMessages() {
         return messageService.fetchAllMessages();
