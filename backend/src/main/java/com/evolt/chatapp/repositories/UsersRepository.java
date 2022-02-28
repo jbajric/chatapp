@@ -18,6 +18,6 @@ public interface UsersRepository extends JpaRepository<User, Integer> {
 
     @Modifying
     @Transactional
-    @Query ("DELETE FROM User user WHERE user.username=:username")
+    @Query("DELETE FROM User user WHERE user.username=:username")
     void removeUserByUsername(@Param("username") String username);
 }

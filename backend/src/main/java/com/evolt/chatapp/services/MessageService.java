@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service("MessageService")
 public class MessageService {
+
     @Autowired
     private MessagesRepository messagesRepository;
 

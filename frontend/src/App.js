@@ -35,7 +35,7 @@ class App extends React.Component {
   };
 
   handleWindowClosed = () => {
-    window.addEventListener("beforeunload", (event) => {
+    window.addEventListener("beforeunload", () => {
       this.userLeftAction();
       this.fetchActiveUsers();
     });
