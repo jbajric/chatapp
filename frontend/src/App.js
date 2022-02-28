@@ -28,7 +28,7 @@ class App extends React.Component {
     };
   }
 
-  handleClose = () => {
+  handleCloseAlert = () => {
     this.setState(() => ({
       loadedMessages: false,
     }));
@@ -37,6 +37,7 @@ class App extends React.Component {
   handleWindowClosed = () => {
     window.addEventListener("beforeunload", (event) => {
       this.userLeftAction();
+      this.fetchActiveUsers();
     });
   };
 
@@ -75,6 +76,7 @@ class App extends React.Component {
 
   componentWillUnmount() {
     this.userLeftAction();
+    this.fetchActiveUsers();
   }
 
   componentDidMount() {
@@ -109,7 +111,7 @@ class App extends React.Component {
               {this.state.loadedMessages ? (
                 <Alert
                   onClose={() => {
-                    this.handleClose();
+                    this.handleCloseAlert();
                   }}
                   variant="filled"
                 >
@@ -119,13 +121,7 @@ class App extends React.Component {
               ) : null}
 
               {this.state.username ? (
-                <Alert
-                  onClose={() => {
-                    this.handleClose();
-                  }}
-                  severity="info"
-                  variant="filled"
-                >
+                <Alert severity="info" variant="filled">
                   Hello there! Your username is: {this.state.username}.
                 </Alert>
               ) : null}

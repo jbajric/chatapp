@@ -5,6 +5,7 @@
 
 #loadOldMessagesButton {
   margin: 5px;
+  background-color: rgb(2, 136, 209);
 }
 
 #sider {
@@ -18,6 +19,11 @@
   position: fixed;
   text-align: center;
   background-color: RGB(200, 217, 246) !important;
+}
+
+/*Alerts*/
+.MuiPaper-root {
+  margin: 20px;
 }
 
 .App {

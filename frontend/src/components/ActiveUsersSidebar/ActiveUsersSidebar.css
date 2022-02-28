@@ -1,11 +1,13 @@
-#activeUserItem {
-  margin-left: 0px;
+#activeUsersList {
+  overflow-y: scroll;
+  max-height: 80vh;
 }
 
 #activeUserItem {
+  margin: 5px;
   background-color: yellowgreen !important;
   color: darkblue;
-  padding: 10px;
+  padding: 13px;
   font-size: 12px;
   border-radius: 12%;
 }
