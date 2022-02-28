@@ -53,6 +53,10 @@ class App extends React.Component {
     });
   };
 
+  componentWillUnmount() {
+    this.userLeftAction();
+  }
+
   componentDidMount() {
     this.fetchActiveUsers();
     this.userJoinedAction();

@@ -40,6 +40,14 @@ class MessageBox extends React.Component {
     };
   }
 
+  userLeftAction = () => {
+    axios
+      .get(HOST_URL + USER_LEFT_URL, {
+        params: { username: this.state.username },
+      })
+      .then();
+  };
+
   onMessageReceive = (msg) => {
     this.setState((prevState) => ({
       messages: [...prevState.messages, msg],
@@ -48,7 +56,7 @@ class MessageBox extends React.Component {
 
   sendMessage = (value) => {
     this.clientRef.sendMessage(
-      HOST_URL + SEND_GLOBAL_MESSAGE,
+      SEND_GLOBAL_MESSAGE,
       JSON.stringify(
         createMessage(
           this.props.user,
@@ -73,11 +81,7 @@ class MessageBox extends React.Component {
             dataSource={this.state.messages}
             renderItem={(item) => (
               <List.Item id="listItem">
-                {item["from"] +
-                  " " +
-                  new Date(item["timestamp"]).toLocaleString("en-GB") +
-                  " " +
-                  item["content"]}
+                {item["from"] + " " + item["timestamp"] + " " + item["content"]}
               </List.Item>
             )}
           ></List>
