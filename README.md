@@ -3,7 +3,7 @@
 Developed by [Jasmin Bajrić](https://github.com/jbajric) in february 2022.
 
 ### Description
-This web application is created for the Evolt interview. Chat application gives users the ability to exchange messages without the need to refresh the web browser session. 
+This chat application gives users the ability to exchange messages without the need to refresh the web browser session. 
 
 ### Used technologies
 
