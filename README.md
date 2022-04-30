@@ -30,15 +30,7 @@ docker compose up
 ```
 
 #### Bonus: Heroku
-This project uses a deployed Heroku Postgres database with following connection credentials:
-
-```
- hosturl: ec2-52-73-149-159.compute-1.amazonaws.com
- hostport: 5432
- database: db6blnro637lup
- username: stgirqrhjzvobe
- password: eafc8e9b75935ca6b56600549dbd6f5b6d216cfc4d5d42495030e7ae470b1f61
-```
+This project uses a deployed Heroku Postgres database.
 
 ## Implemented functionalities:
 

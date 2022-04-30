@@ -134,9 +134,7 @@ class App extends React.Component {
               />
             </Content>
           </Layout>
-          <Footer id="footer">
-            Developed by Jasmin Bajrić in february 2022.
-          </Footer>
+          <Footer id="footer">Developed by Jasmin Bajrić.</Footer>
         </Layout>
       </div>
     );
